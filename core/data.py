@@ -2,7 +2,7 @@ import yfinance as yf
 import streamlit as st
 
 @st.cache_data(ttl=3600)
-def get_ticker_data(ticker: str) -> dict:
+def get_ticker_data(ticker: str):
     t = yf.Ticker(ticker)
 
     info = t.info
